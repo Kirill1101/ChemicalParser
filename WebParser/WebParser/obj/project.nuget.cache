@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "UKbsfQkAyUi15d6p2869lRbxiWigiBeoBbZzLE3uHd+sEHyxgVDRdNl/cSiRLzK2DJlLH6q/yxjyFIGb4vTwnw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kiril\\source\\repos\\WebParser\\WebParser\\WebParser.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kiril\\.nuget\\packages\\exceldatareader\\3.6.0\\exceldatareader.3.6.0.nupkg.sha512",
+    "C:\\Users\\kiril\\.nuget\\packages\\exceldatareader.dataset\\3.6.0\\exceldatareader.dataset.3.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

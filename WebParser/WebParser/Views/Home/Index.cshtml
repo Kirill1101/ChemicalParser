@@ -1,0 +1,9 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h3>Выберите файл для загрузки</h3>
+<form asp-action="PostFileToServerAndGetJsonDescriptionOfChemicalFormula" asp-controller="Home" method="post" enctype="multipart/form-data">
+    <input type="file" name="uploadedFile" /><br>
+    <input type="submit" value="Загрузить" />
+</form>

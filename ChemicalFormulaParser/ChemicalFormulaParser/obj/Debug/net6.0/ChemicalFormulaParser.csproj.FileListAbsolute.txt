@@ -1,0 +1,14 @@
+C:\Users\kiril\source\repos\ChemicalFormulaParser\ChemicalFormulaParser\bin\Debug\net6.0\ChemicalFormulaParser.deps.json
+C:\Users\kiril\source\repos\ChemicalFormulaParser\ChemicalFormulaParser\bin\Debug\net6.0\ChemicalFormulaParser.dll
+C:\Users\kiril\source\repos\ChemicalFormulaParser\ChemicalFormulaParser\bin\Debug\net6.0\ChemicalFormulaParser.pdb
+C:\Users\kiril\source\repos\ChemicalFormulaParser\ChemicalFormulaParser\obj\Debug\net6.0\ChemicalFormulaParser.csproj.AssemblyReference.cache
+C:\Users\kiril\source\repos\ChemicalFormulaParser\ChemicalFormulaParser\obj\Debug\net6.0\ChemicalFormulaParser.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kiril\source\repos\ChemicalFormulaParser\ChemicalFormulaParser\obj\Debug\net6.0\ChemicalFormulaParser.AssemblyInfoInputs.cache
+C:\Users\kiril\source\repos\ChemicalFormulaParser\ChemicalFormulaParser\obj\Debug\net6.0\ChemicalFormulaParser.AssemblyInfo.cs
+C:\Users\kiril\source\repos\ChemicalFormulaParser\ChemicalFormulaParser\obj\Debug\net6.0\ChemicalFormulaParser.csproj.CoreCompileInputs.cache
+C:\Users\kiril\source\repos\ChemicalFormulaParser\ChemicalFormulaParser\obj\Debug\net6.0\ChemicalFormulaParser.dll
+C:\Users\kiril\source\repos\ChemicalFormulaParser\ChemicalFormulaParser\obj\Debug\net6.0\refint\ChemicalFormulaParser.dll
+C:\Users\kiril\source\repos\ChemicalFormulaParser\ChemicalFormulaParser\obj\Debug\net6.0\ChemicalFormulaParser.pdb
+C:\Users\kiril\source\repos\ChemicalFormulaParser\ChemicalFormulaParser\obj\Debug\net6.0\ref\ChemicalFormulaParser.dll
+C:\Users\kiril\source\repos\ChemicalFormulaParser\ChemicalFormulaParser\obj\Debug\net6.0\ChemicalFormulaParser.Properties.Resources.resources
+C:\Users\kiril\source\repos\ChemicalFormulaParser\ChemicalFormulaParser\obj\Debug\net6.0\ChemicalFormulaParser.csproj.GenerateResource.cache

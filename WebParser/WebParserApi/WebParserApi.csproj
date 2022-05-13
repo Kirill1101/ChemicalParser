@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="bin\Debug\net6.0\ChemicalFormulaParser.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ChemicalFormulaParser">
+      <HintPath>bin\Debug\net6.0\ChemicalFormulaParser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
