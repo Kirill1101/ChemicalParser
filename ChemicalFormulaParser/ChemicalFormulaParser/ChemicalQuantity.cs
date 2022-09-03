@@ -9,15 +9,42 @@ namespace ChemicalFormulaParser
     /// </summary>
     public class ChemicalQuantity : IComparable<ChemicalQuantity>, IComparable
     {
+        [JsonIgnore]
         /// <summary>
         /// минимальное содержание элемента в веществе
         /// </summary>
         public double Min { get; set; }
 
+        [JsonIgnore]
         /// <summary>
         /// максимальное содержание элемента в веществе
         /// </summary>
         public double Max { get; set; }
+
+        [JsonPropertyName("Min")]
+        public string MinStr { 
+            get
+            {
+                if (double.IsNaN(Min))
+                {
+                    return "x";
+                }
+                return Min.ToString();
+            } 
+        }
+
+        [JsonPropertyName("Max")]
+        public string MaxStr
+        {
+            get
+            {
+                if (double.IsNaN(Max))
+                {
+                    return "x";
+                }
+                return Max.ToString();
+            }
+        }
 
         public ChemicalQuantity(double min, double max)
         {

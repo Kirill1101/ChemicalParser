@@ -1,0 +1,8 @@
+C:\Users\kiril\source\repos\WebParser\WebParserApi\obj\Release\net6.0\PubTmp\Out\WebParserApi.exe
+C:\Users\kiril\source\repos\WebParser\WebParserApi\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Users\kiril\source\repos\WebParser\WebParserApi\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\kiril\source\repos\WebParser\WebParserApi\obj\Release\net6.0\PubTmp\Out\WebParserApi.dll
+C:\Users\kiril\source\repos\WebParser\WebParserApi\obj\Release\net6.0\PubTmp\Out\WebParserApi.deps.json
+C:\Users\kiril\source\repos\WebParser\WebParserApi\obj\Release\net6.0\PubTmp\Out\WebParserApi.runtimeconfig.json
+C:\Users\kiril\source\repos\WebParser\WebParserApi\obj\Release\net6.0\PubTmp\Out\WebParserApi.pdb
+C:\Users\kiril\source\repos\WebParser\WebParserApi\obj\Release\net6.0\PubTmp\Out\ChemicalFormulaParser.dll

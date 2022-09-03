@@ -43,6 +43,7 @@ namespace ChemicalFormulaParser
         /// </summary>
         public ChemicalQuantity Quantity { get; set; }
 
+
         /// <summary>
         /// создание элемента по имени (обозначению)
         /// </summary>
@@ -52,6 +53,20 @@ namespace ChemicalFormulaParser
             int num = Array.IndexOf(_elements, name); // StringComparison.InvariantCulture
             if (num < 0 || num > 125)
                 throw new ApplicationException("Не найден атомный номер по названию элемента: " + name);
+            AtomicNumber = (byte)(num + 1);
+            Name = name;
+            Quantity = quantity;
+        }
+
+        /// <summary>
+        /// создание элемента по имени (обозначению), если известна формула
+        /// </summary>
+        /// <param name="name">имя элемента, например: "H", "He" и т.п.</param>
+        public ChemicalElement(string name, ChemicalQuantity quantity, string str)
+        {
+            int num = Array.IndexOf(_elements, name); // StringComparison.InvariantCulture
+            if (num < 0 || num > 125)
+                throw new ApplicationException("Не найден атомный номер по названию элемента: " + name + " в формуле " + str);
             AtomicNumber = (byte)(num + 1);
             Name = name;
             Quantity = quantity;

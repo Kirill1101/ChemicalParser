@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="bin\Debug\net6.0\ChemicalFormulaParser.dll" />
+    <None Include="bin\Debug\net6.0\ChemicalFormulaParser.dll" />
   </ItemGroup>
 
   <ItemGroup>

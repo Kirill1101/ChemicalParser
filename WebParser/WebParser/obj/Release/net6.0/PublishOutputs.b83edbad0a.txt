@@ -1,0 +1,9 @@
+C:\Users\kiril\source\repos\WebParser\WebParser\obj\Release\net6.0\PubTmp\Out\WebParser.exe
+C:\Users\kiril\source\repos\WebParser\WebParser\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Users\kiril\source\repos\WebParser\WebParser\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\kiril\source\repos\WebParser\WebParser\obj\Release\net6.0\PubTmp\Out\WebParser.dll
+C:\Users\kiril\source\repos\WebParser\WebParser\obj\Release\net6.0\PubTmp\Out\WebParser.deps.json
+C:\Users\kiril\source\repos\WebParser\WebParser\obj\Release\net6.0\PubTmp\Out\WebParser.runtimeconfig.json
+C:\Users\kiril\source\repos\WebParser\WebParser\obj\Release\net6.0\PubTmp\Out\WebParser.pdb
+C:\Users\kiril\source\repos\WebParser\WebParser\obj\Release\net6.0\PubTmp\Out\ExcelDataReader.dll
+C:\Users\kiril\source\repos\WebParser\WebParser\obj\Release\net6.0\PubTmp\Out\ExcelDataReader.DataSet.dll

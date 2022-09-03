@@ -5,16 +5,19 @@ using System.Net.Http.Headers;
 using ExcelDataReader;
 using System.Text;
 using System.Text.Json;
+using System.Xml;
 
 namespace WebParser.Controllers
 {
     public class HomeController : Controller
     {
         IWebHostEnvironment _appEnvironment;
+        string apiUrl;
 
-        public HomeController(IWebHostEnvironment appEnvironment)
+        public HomeController(IWebHostEnvironment appEnvironment, IConfiguration conf)
         {
             _appEnvironment = appEnvironment;
+            apiUrl = conf.GetConnectionString("apiUrls");
         }
 
         public IActionResult Index()
@@ -36,7 +39,6 @@ namespace WebParser.Controllers
                     string jsonString = "";
                     string file_name = uploadedFile.FileName.Split('.')[0];
                     string file_type = uploadedFile.ContentType;
-                    string apiUrl = "http://localhost:5074/api/";
                     using (HttpClient client = new HttpClient())
                     {
                         client.BaseAddress = new Uri(apiUrl);
@@ -58,8 +60,7 @@ namespace WebParser.Controllers
                                 formulas.Append("\n");
                             }
                             formulas.Remove(formulas.Length - 1, 1);
-                            string serializeStr = JsonSerializer.Serialize(formulas.ToString());
-                            HttpContent content = new StringContent(serializeStr, Encoding.UTF8, "application/json");
+                            HttpContent content = new StringContent(JsonSerializer.Serialize(formulas.ToString()), Encoding.UTF8, "application/json");
                             var response = await client.PostAsync("parser", content);
                             if (response.IsSuccessStatusCode)
                             {
@@ -75,6 +76,50 @@ namespace WebParser.Controllers
                                 while (reader.Peek() >= 0)
                                 {
                                     formulas.Append(reader.ReadLine());
+                                    formulas.Append("\n");
+                                }
+                                formulas.Remove(formulas.Length - 1, 1);
+                                HttpContent content = new StringContent(JsonSerializer.Serialize(formulas.ToString()), Encoding.UTF8, "application/json");
+                                var response = await client.PostAsync("parser", content);
+                                if (response.IsSuccessStatusCode)
+                                {
+                                    var result = response.Content.ReadAsStringAsync();
+                                    result.Wait();
+                                    jsonString = result.Result.ToString();
+                                }
+                            }
+                        }
+                        else if (uploadedFile.FileName.Split('.')[1] == "xml")
+                        {
+                            XmlDocument xDoc = new XmlDocument();
+                            xDoc.Load(uploadedFile.OpenReadStream());
+                            XmlElement xRoot = xDoc.DocumentElement;
+                            foreach (XmlElement xnode in xRoot)
+                            {
+                                formulas.Append(xnode.InnerXml);
+                                formulas.Append("\n");
+                            }
+                            formulas.Remove(formulas.Length - 1, 1);
+                            HttpContent content = new StringContent(JsonSerializer.Serialize(formulas.ToString()), Encoding.UTF8, "application/json");
+                            var response = await client.PostAsync("parser", content);
+                            if (response.IsSuccessStatusCode)
+                            {
+                                var result = response.Content.ReadAsStringAsync();
+                                result.Wait();
+                                jsonString = result.Result.ToString();
+                            }
+                        }
+                        else if (uploadedFile.FileName.Split('.')[1] == "json")
+                        {
+                            using (StreamReader reader = new StreamReader(uploadedFile.OpenReadStream()))
+                            {
+                                string text = reader.ReadToEnd();
+                                text = text.Substring(1, text.Length - 2);
+                                text = text.Replace("\"", "");
+                                string[] formulasArr = text.Split(",");
+                                for (int i = 0; i < formulasArr.Length; ++i)
+                                {
+                                    formulas.Append(formulasArr[i]);
                                     formulas.Append("\n");
                                 }
                                 formulas.Remove(formulas.Length - 1, 1);
